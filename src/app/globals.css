@@ -2,6 +2,20 @@
   --background: #ffffff;
   --foreground: #171717;
 
+  --page-margin: 3rem;
+  --grid-gap: 1.5rem;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 6rem;
+
+  --border-wdith: 1px;
+
+  --duration-fast: 150ms;
+  --duration-mediuam: 300ms;
+  --duration-slow: 500ms;
 }
 
 *,
