@@ -2,7 +2,7 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --page-margin: 3rem;
+  --page-margin: clamp(1.25rem, 3.35vw, 3rem);
   --grid-gap: 1.5rem;
 
   --space-xs: 0.5rem;
@@ -60,6 +60,12 @@ select {
 
 button {
   color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 /*HOMEPAGE*/
@@ -183,7 +189,8 @@ button {
 .project-details {
   display: flex;
   flex-direction: column;
-  gap: 0.25;
+  gap: 0.25rem;
+  min-width: 0;
 }
 
 .project-title {
@@ -249,4 +256,114 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 1099px) {
+  .home {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  
+  .project-index {
+    grid-column: 1 / span 4;
+  }
+  
+  .project-preview {
+    grid-column: 5 / -1;
+  }
+
+  .project-item + .project-item {
+    margin-top: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 0.95rem;
+  }
+
+  .site-nav {
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 699px) {
+  .home {
+    min-height: 100vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: var(--space-lg);
+  }
+
+  .site-header,
+  .project-index,
+  .project-preview,
+  .site-footer {
+    grid-column: 1;
+  }
+
+  .site-header {
+    gap: var(--space-md);
+  }
+
+  .site-role {
+    max-width: 12rem;
+  }
+
+  .site-nav a {
+    display: none;
+  }
+
+  .site-nav button {
+    font-size: 1.25rem;
+  }
+
+  .project-index {
+    display: block;
+  }
+
+  .section-heading {
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-item + .project-item {
+    margin-top: 1.75rem;
+  }
+
+  .project-button {
+    grid-template-columns: 2rem minmax(0, 1fr);
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-instruction {
+    margin-top: var(--space-lg);
+    padding-top: 0;
+  }
+
+  .project-preview {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .preview-canvas {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 18rem;
+    aspect-ratio: 4 / 3;
+    border: var(--border-wdith) solid currentColor;
+  }
+
+  .preview-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .site-footer {
+    margin-top: var(--space-sm);
+  }
 }
