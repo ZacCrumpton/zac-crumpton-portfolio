@@ -1,35 +1,4 @@
-const projects = [
-  {
-    number: "01",
-    title: "Cheatham Contracting",
-    category: "Web Design + Development",
-  },
-  {
-    number: "02",
-    title: "Cheatham Arboriculture",
-    category: "Web Design + Development",
-  },
-  {
-    number: "03",
-    title: "Altalune",
-    category: "Web Design + Development + CMS",
-  },
-  {
-    number: "04",
-    title: "A Familiar Place To Get Lost",
-    category: "Creative Direction + Design",
-  },
-  {
-    number: "05",
-    title: "Live Music",
-    category: "Photography",
-  },
-  {
-    number: "06",
-    title: "Shedonist - Mrs. Jones",
-    category: "Video + Editing"
-  },
-];
+import { projects } from "@/data/projects";
 
 export default function Home() {
   return (
@@ -59,9 +28,11 @@ export default function Home() {
 
         <ol className="project-list">
           {projects.map((project) => (
-            <li key={project.number} className="project-item">
+            <li key={project.id} className="project-item">
               <button type="button" className="project-button">
-                <span className="project-number">{project.number}</span>
+                <span className="project-number">
+                  {String(project.id).padStart(2, "0")}
+                </span>
 
                 <span className="project-details">
                   <span className="project-title">{project.title}</span>
