@@ -57,7 +57,7 @@ export default function Home() {
 
           <div className="preview-footer">
             <p>ZC / Project / 001</p>
-            <a href="/work/cheatham-contracting">Open Project ↗</a>
+            <a href={`/work/${projects[0].slug}`}>Open Project ↗</a>
           </div>
       </section>
 
