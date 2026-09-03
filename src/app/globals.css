@@ -366,4 +366,56 @@ video {
   .site-footer {
     margin-top: var(--space-sm);
   }
+
+  .case-study {
+  min-height: 100vh;
+  padding: var(--page-margin);
+  }
+
+  .case-study-header {
+    display: grid;
+    grid-template-columns: minmax(4rem, 1fr) minmax(0, 5fr);
+    gap: var(--grid-gap);
+    padding-bottom: var(--space-lg);
+    border-bottom: var(--border-width) solid currentColor;
+  }
+
+  .case-study-content {
+    padding-top: var(--space-lg);
+  }
+
+  .project-overview,
+  .project-meta,
+  .project-navigation {
+    padding-block: var(--space-lg);
+    border-bottom: var(--border-wdith) solid currentColor;
+  }
+
+  .project-meta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--grid-gap);
+  }
+
+  .project-meta ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .project-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+
+  .project-section {
+    padding-block: var(--space-lg);
+    border-bottom: var(--border-wdith) solid currentColor;
+  }
+
+  .project-section-content {
+    margin-top: var(--space-md);
+  }
+
 }

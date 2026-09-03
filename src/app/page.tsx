@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { projects } from "@/data/projects";
 
 export default function Home() {
@@ -10,8 +11,8 @@ export default function Home() {
         </div>
 
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="/">Index</a>
-          <a href="/info">Info</a>
+          <Link href="/">Index</Link>
+          <Link href="/info">Info</Link>
           <button type="button" aria-label="Open navigation menu">
             +
           </button>
@@ -57,7 +58,7 @@ export default function Home() {
 
           <div className="preview-footer">
             <p>ZC / Project / 001</p>
-            <a href={`/work/${projects[0].slug}`}>Open Project ↗</a>
+            <Link href={`/work/${projects[0].slug}`}>Open Project ↗</Link>
           </div>
       </section>
 
